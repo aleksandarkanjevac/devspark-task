@@ -20,9 +20,145 @@
             "endpoint": 0
         },
         {
+            "key": "field_6384ef95a7293",
+            "label": "Background",
+            "name": "text_image_background_type",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "color": "Background color",
+                "gradient": "Background gradient"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_6384e128183cb",
             "label": "Background Color",
             "name": "text_image_background_color",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6384ef95a7293",
+                        "operator": "==",
+                        "value": "color"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_6384ee6ff041b",
+            "label": "Background Color Gradient",
+            "name": "text_image_background_color_gradient",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6384ef95a7293",
+                        "operator": "==",
+                        "value": "gradient"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6384eefdf041d",
+                    "label": "First color",
+                    "name": "first_gradient_color",
+                    "aria-label": "",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 0,
+                    "return_format": "string"
+                },
+                {
+                    "key": "field_6384eeb0f041c",
+                    "label": "Second color",
+                    "name": "second_gradient_color",
+                    "aria-label": "",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 0,
+                    "return_format": "string"
+                },
+                {
+                    "key": "field_6384ef26f041e",
+                    "label": "Angle",
+                    "name": "gradient_angle",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 90,
+                    "min": "",
+                    "max": "",
+                    "placeholder": "",
+                    "step": "",
+                    "prepend": "",
+                    "append": ""
+                }
+            ]
+        },
+        {
+            "key": "field_6384f230cd793",
+            "label": "Text Color",
+            "name": "text_image_text_color",
             "aria-label": "",
             "type": "color_picker",
             "instructions": "",
@@ -33,7 +169,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "default_value": "#4A4A4A",
             "enable_opacity": 0,
             "return_format": "string"
         },
@@ -92,7 +228,7 @@
         {
             "key": "field_6384e33596c8e",
             "label": "Block Responsive Layout",
-            "name": "text_image_block_responsive_layout_copy",
+            "name": "text_image_block_responsive_layout",
             "aria-label": "",
             "type": "select",
             "instructions": "",
@@ -202,14 +338,14 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "default_value": "#2FB297",
             "enable_opacity": 0,
             "return_format": "string"
         },
         {
             "key": "field_6384e484ab936",
             "label": "CTA Text Color",
-            "name": "text_image_cta_text_color_copy",
+            "name": "text_image_cta_text_color",
             "aria-label": "",
             "type": "color_picker",
             "instructions": "",
@@ -220,7 +356,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "default_value": "#fff",
             "enable_opacity": 0,
             "return_format": "string"
         },
@@ -285,5 +421,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1669653704
+    "modified": 1669661515
 }

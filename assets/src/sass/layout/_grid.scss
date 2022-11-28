@@ -2,21 +2,27 @@
 
     margin-right: auto;
     margin-left: auto;
-    max-width: $lg + 1 - $grid-column-gutter;
-    padding-left: $grid-column-gutter;
-    padding-right: $grid-column-gutter;
+    max-width: $lg + 60px;
     position: relative;
+
+    @media screen and (min-width: $lg) and (max-width: 1300px) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 
     @include breakpoint(lg) {
        max-width: $md;
     }
 
-    @include breakpoint(md) {
-       max-width: $sm;
+    @media screen and (min-width: $md) and (max-width: 1051px) {
+        padding-left: 30px;
+        padding-right: 30px;
     }
 
-    @include breakpoint(sm) {
+    @include breakpoint(md) {
        max-width: 100%;
+       padding-left: $grid-column-gutter;
+       padding-right: $grid-column-gutter;
     }
 
     @include breakpoint(xs) {
@@ -30,6 +36,20 @@
         max-width: 100%;
         position: relative;
         width: 100%;
+    }
+
+    &-narrow{
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1040px;
+        @include breakpoint(md) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        @include breakpoint(xs) {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
     }
 }
 

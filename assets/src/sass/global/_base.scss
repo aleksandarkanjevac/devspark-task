@@ -43,6 +43,8 @@ h6 {
 
 a {
 
+    font-weight: $font-weight-bold;
+    text-decoration: none;
 	transition: all .3s ease;
 
 	&:link,
@@ -53,7 +55,6 @@ a {
 	&:hover,
 	&:active {
 		color: $color-link-hover;
-		text-decoration: underline;
 	}
 
 	&:focus {

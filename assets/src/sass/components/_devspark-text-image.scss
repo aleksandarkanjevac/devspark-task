@@ -1,0 +1,30 @@
+.devspark-text-image{ 
+    @include flex(flex,row,wrap,space-between,center);
+
+    &.reverse{
+      flex-direction: row-reverse;
+    }
+
+    padding: 50px 0;
+
+  &-text-area{
+    flex-basis: calc(50% - 57px);
+
+    .devspark-title{
+      margin: 0;
+    }
+
+    .cta-button{
+      display: inline-block;
+    }
+  }
+  &-image-area{
+      flex-basis: calc(50% - 57px);
+      .image{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-bottom: 71%;
+      }
+  }
+}
