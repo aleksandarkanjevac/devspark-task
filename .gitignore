@@ -1,0 +1,18 @@
+/node_modules/
+/.idea/
+/.idea/workspace.xml
+/.vscode/
+# API keys and secrets
+.env
+
+# Dependency directory
+node_modules
+
+# Editors
+.idea
+*.iml
+.vscode
+
+# OS metadata
+.DS_Store
+Thumbs.db
