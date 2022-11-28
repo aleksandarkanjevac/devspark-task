@@ -2,7 +2,6 @@
  * SASS
  */
 import '../sass/frontend.scss'
-import './vendor/vendor'
 
 /**
  * JavaScript

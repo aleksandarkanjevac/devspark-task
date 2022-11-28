@@ -1,7 +1,7 @@
 <?php
 /*
- *  Author: Koto Team
- *  URL: kototheme.co
+ *  Author: DevSpark Team
+ *  URL: 
  */
 
  
@@ -24,3 +24,8 @@ require get_template_directory() . '/inc/filters.php';
  * Helper functions.
  */
 require get_template_directory() . '/inc/helper-functions.php';
+
+/**
+ * Register ACF Blocks.
+ */
+require get_template_directory() . '/inc/acf/acf-block-register.php';

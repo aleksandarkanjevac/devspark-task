@@ -1,7 +1,7 @@
 <?php
 /**
 * Theme helper functions
-* Author: Koto Team
+* Author: DevSpark Team
 *
 * @link https://developer.wordpress.org/reference/functions/wp_enqueue_style/
 * @link https://developer.wordpress.org/reference/functions/wp_enqueue_script/

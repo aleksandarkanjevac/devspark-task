@@ -1,7 +1,7 @@
 <?php
 /**
 * Theme actions
-* Author: Koto Team
+* Author: DevSpark Team
 *
 * @link https://developer.wordpress.org/plugins/hooks/filters/
 */
@@ -39,3 +39,17 @@ function add_slug_to_body_class($classes) {
 
     return $classes;
 }
+
+//Add custom category for ACF/Gutenberg blocks
+function devspark_block_category( $categories, $post ) {
+	return array_merge(
+		$categories,
+		array(
+			array(
+				'slug' => 'devspark',
+				'title' => 'DevSpark',
+			),
+		)
+	);
+}
+add_filter( 'block_categories', 'devspark_block_category', 10, 2);

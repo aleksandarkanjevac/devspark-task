@@ -1,7 +1,7 @@
 <?php
 /**
 * Theme actions
-* Author: Koto Team
+* Author: DevSpark Team
 *
 * @link https://developer.wordpress.org/plugins/hooks/actions/
 */

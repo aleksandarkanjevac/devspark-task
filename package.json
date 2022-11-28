@@ -26,7 +26,7 @@
     "stylelint:fix": "stylelint assets/src/**/**/*.{css,scss,pcss} --fix",
     "prettier": "prettier assets/src/js/**/*.js",
     "prettier:fix": "prettier --write assets/src/js/**/*.js",
-    "translate": "wp-pot --src '**/**/**/*.php' --dest-file 'languages/koto.pot' --package 'koto' --domain 'koto-text-domain' --last-translator 'Koto team <dev@wearepresta.com>' --team 'Koto team <dev@wearepresta.com>' --bug-report 'wearepresta.com'"
+    "translate": "wp-pot --src '**/**/**/*.php' --dest-file 'languages/devspark.pot' --package 'devspark' --domain 'devspark-text-domain' --last-translator 'DevSpark team' --team 'DevSpark team' --bug-report ''"
   },
   "babel": {
     "extends": "./webpack/babel.config.js"
