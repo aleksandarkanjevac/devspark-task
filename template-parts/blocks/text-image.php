@@ -55,10 +55,10 @@ $block_responsive_layout = (get_field('text_image_block_responsive_layout')) ? g
       <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className).' '.esc_attr($block_layout).' '.$block_breakpoint_class.' '.$block_responsive_layout ?> ">
         <div class="devspark-text_image-text">
           <?php if(get_field('text_image_title')) : ?>
-            <h2 style = "<?php echo ( get_field('text_image_title_text_color'))  ? 'color:'.get_field('text_image_title_text_color').'' : '#4A4A4A'; ?>" class="devspark-title"><?php the_field('text_image_title'); ?></h2>
+            <h2 style = "<?php echo ( get_field('text_image_title_text_color'))  ? 'color:'.get_field('text_image_title_text_color').'' : '#020202'; ?>" class="devspark-title"><?php the_field('text_image_title'); ?></h2>
           <?php endif; ?>
-          <?php if(get_field('text_image_paragraph')) :?>
-            <p style = "<?php echo ( get_field('text_image_paragraph_text_color'))  ? 'color:'.get_field('text_image_paragraph_text_color').'' : '#020202'; ?>" class="devspark-paragraph"><?php the_field('text_image_paragraph'); ?></p>
+          <?php if(get_field('text_image_description')) :?>
+            <div style = "<?php echo ( get_field('text_image_description_text_color'))  ? 'color:'.get_field('text_image_description_text_color').'' : 'color:#4A4A4A'; ?>" class="devspark-description <?php echo ( get_field('text_image_description_text_color') !== '#4A4A4A')  ? 'custom-color' : ''; ?>"><?php the_field('text_image_description'); ?></div>
           <?php endif; ?>
           <?php 
             $cta_link = get_field('text_image_cta');

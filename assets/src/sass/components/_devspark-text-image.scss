@@ -61,34 +61,24 @@
       line-height: 47px;
       margin: 0;
 
-      .small &{
-        @include breakpoint(sm){
-          font-size: 33px;
-          line-height: 39px;
-        }
-      }
-
-      .x_small &{
-        @include breakpoint(xs){
-          font-size: 33px;
-          line-height: 39px;
-        }
+      @include breakpoint(sm){
+        font-size: 33px;
+        line-height: 39px;
       }
     }
 
-    .devspark-paragraph{
-      .small &{
+    .devspark-description{
+
         @include breakpoint(sm){
           font-size: 18px;
           line-height: 21px;
         }
-      }
 
-      .x_small &{
-        @include breakpoint(xs){
-          font-size: 18px;
-          line-height: 21px;
+      &.custom-color {
+        a{
+          color: inherit;
         }
+       
       }
     }
 

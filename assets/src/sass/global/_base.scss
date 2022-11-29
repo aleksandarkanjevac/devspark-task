@@ -12,7 +12,7 @@ body {
 h1, h2, h3,
 h4, h5, h6 {
     color: $color-heading;
-    font-weight: $font-weight-bold;
+    font-weight: $font-weight-regular;
     line-height: 1.1;
     margin: $margin 0;
 }
@@ -44,7 +44,7 @@ h6 {
 a {
 
     font-weight: $font-weight-bold;
-    text-decoration: none;
+    text-decoration: underline;
 	transition: all .3s ease;
 
 	&:link,
@@ -60,6 +60,10 @@ a {
 	&:focus {
 		outline: none;
 	}
+
+    &.button{
+        text-decoration: none;
+    }
 
 }
 
