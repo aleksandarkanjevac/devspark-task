@@ -10,13 +10,13 @@
  */
 
 // Create id attribute allowing for custom "anchor" value.
-$id = 'devspark-text-image' . $block['id'];
+$id = 'devspark-text_image' . $block['id'];
 if (!empty($block['anchor'])) {
     $id = $block['anchor'];
 }
 
 // Create class attribute allowing for custom "className" and "align" values.
-$className = 'devspark-text-image';
+$className = 'devspark-text_image';
 if (!empty($block['className'])) {
     $className .= ' ' . $block['className'];
 }
@@ -24,6 +24,7 @@ if (!empty($block['align'])) {
     $className .= ' align' . $block['align'];
 }
 
+// Block background type - color || gradient
 $block_background = (get_field('text_image_background_type')) ? (get_field('text_image_background_type')) : false;
 
 if($block_background) :
@@ -45,21 +46,19 @@ if($block_background) :
   endswitch;
 endif;
 
-$text_color = get_field('text_image_text_color');
-$block_text_color = ( $text_color)  ? 'color:'.$text_color.'' : '#4A4A4A';
-$block_heading_color = ( $text_color)  ? 'color:'.$text_color.'' : '#020202';
-
 $block_layout = get_field('text_image_block_layout');
+$block_breakpoint_class = (get_field('text_image_block_mobile_breakpoint')) ? get_field('text_image_block_mobile_breakpoint') : '';
+$block_responsive_layout = (get_field('text_image_block_responsive_layout')) ? get_field('text_image_block_responsive_layout') : '';
 ?>
   <div style="<?php echo $background; ?>" class="container">
     <div class="container-narrow">
-      <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className).' '.esc_attr($block_layout) ?> ">
-        <div class="devspark-text-image-text-area">
+      <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className).' '.esc_attr($block_layout).' '.$block_breakpoint_class.' '.$block_responsive_layout ?> ">
+        <div class="devspark-text_image-text">
           <?php if(get_field('text_image_title')) : ?>
-            <h2 style = "<?php echo $block_heading_color; ?>" class="devspark-title"><?php the_field('text_image_title'); ?></h2>
+            <h2 style = "<?php echo ( get_field('text_image_title_text_color'))  ? 'color:'.get_field('text_image_title_text_color').'' : '#4A4A4A'; ?>" class="devspark-title"><?php the_field('text_image_title'); ?></h2>
           <?php endif; ?>
           <?php if(get_field('text_image_paragraph')) :?>
-            <p style = "<?php echo $block_text_color; ?>" class="devspark-paragraph"><?php the_field('text_image_paragraph'); ?></p>
+            <p style = "<?php echo ( get_field('text_image_paragraph_text_color'))  ? 'color:'.get_field('text_image_paragraph_text_color').'' : '#020202'; ?>" class="devspark-paragraph"><?php the_field('text_image_paragraph'); ?></p>
           <?php endif; ?>
           <?php 
             $cta_link = get_field('text_image_cta');
@@ -73,7 +72,7 @@ $block_layout = get_field('text_image_block_layout');
                 <a style="background-color:<?php echo $cta_background_color; ?>; color:<?php echo $cta_text_color; ?>" class="button cta-button" href="<?php echo esc_url( $cta_link_url ); ?>" target="<?php echo esc_attr( $cta_link_target ); ?>"><?php echo esc_html( $cta_link_title ); ?></a>
           <?php endif; ?>
         </div>
-        <div class="devspark-text-image-image-area">
+        <div class="devspark-text_image-image">
           <?php 
           $image = get_field('text_image_image');
           if($image) : ?>

@@ -156,24 +156,6 @@
             ]
         },
         {
-            "key": "field_6384f230cd793",
-            "label": "Text Color",
-            "name": "text_image_text_color",
-            "aria-label": "",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "#4A4A4A",
-            "enable_opacity": 0,
-            "return_format": "string"
-        },
-        {
             "key": "field_6384e1a1d5012",
             "label": "Block Layout",
             "name": "text_image_block_layout",
@@ -240,8 +222,8 @@
                 "id": ""
             },
             "choices": {
-                "responsive_default": "Image Above - Text Below",
-                "responsive_reverse": "Text Above - Image Below"
+                "responsive_default": "Text Above - Image Below",
+                "responsive_reverse": "Image Above - Text Below"
             },
             "default_value": "responsive_default",
             "return_format": "value",
@@ -273,7 +255,7 @@
             "label": "Title",
             "name": "text_image_title",
             "aria-label": "",
-            "type": "text",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -284,9 +266,27 @@
             },
             "default_value": "",
             "maxlength": "",
+            "rows": 2,
             "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "new_lines": "br"
+        },
+        {
+            "key": "field_6384f230cd793",
+            "label": "Title Text Color",
+            "name": "text_image_title_text_color",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#020202",
+            "enable_opacity": 0,
+            "return_format": "string"
         },
         {
             "key": "field_6384deba1fcf6",
@@ -307,6 +307,24 @@
             "rows": 4,
             "placeholder": "",
             "new_lines": ""
+        },
+        {
+            "key": "field_6385b3237bca7",
+            "label": "Paragraph Text Color",
+            "name": "text_image_paragraph_text_color",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#4A4A4A",
+            "enable_opacity": 0,
+            "return_format": ""
         },
         {
             "key": "field_6384deea1fcf7",
@@ -421,5 +439,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1669661515
+    "modified": 1669710135
 }
